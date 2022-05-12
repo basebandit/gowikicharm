@@ -1,0 +1,23 @@
+# Copyright 2022 capricorn
+# See LICENSE file for licensing details.
+
+# For a complete list of supported options, see:
+# https://juju.is/docs/sdk/metadata-reference
+name: gowikicharm
+display-name: |
+  GoWiki
+description: |
+  A basic demonstration charm that hosts a wiki with various pages. Hosted by a 
+  small ,custom webserver written in Go(https://github.com/basebandit/gowiki).
+  Illustrates the use of charm workloads, actions, config, storage and relations.
+summary: |
+  My first charm
+
+containers:
+  gowiki:
+    resource: gowiki-image
+
+resources:
+  gowiki-image:
+    type: oci-image
+    description: OCI image for gowiki 
